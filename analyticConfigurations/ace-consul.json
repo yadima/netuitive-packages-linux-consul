@@ -1,0 +1,33 @@
+{
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "consul.catalog.*",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "consul.runtime.*",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "consul.counter.*",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      }
+    ],
+    "name": "Consul",
+    "scope": {
+      "elementType": "SERVER",
+      "metricMatches": "^consul\\..*"
+    },
+    "type": "ACE"
+  }
+}
